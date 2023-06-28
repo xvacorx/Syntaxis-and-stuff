@@ -10,12 +10,12 @@ int Contador = 0;
 while (Fin == false)
 {
     Console.WriteLine("Jugador {0}:",Jugador);
-    Console.WriteLine("Elija Casilla 1-9)");
-    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[2, 0], TaTeTi[2, 1], TaTeTi[2, 2]);
+    Console.WriteLine("Elija Casilla 1-9)"); //Referencia de tecládo numérico de PC
+    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[2, 0], TaTeTi[2, 1], TaTeTi[2, 2]); //7 | 8 | 9
     Console.WriteLine("----------");
-    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[1, 0], TaTeTi[1, 1], TaTeTi[1, 2]);
+    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[1, 0], TaTeTi[1, 1], TaTeTi[1, 2]); //4 | 5 | 6
     Console.WriteLine("----------");
-    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[0, 0], TaTeTi[0, 1], TaTeTi[0, 2]);
+    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[0, 0], TaTeTi[0, 1], TaTeTi[0, 2]); //1 | 2 | 3
     Casillero = int.Parse(Console.ReadLine());
 
     Casilla(Casillero, Jugador);
