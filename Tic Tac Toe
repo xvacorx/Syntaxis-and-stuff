@@ -12,6 +12,12 @@ while (!Fin)
     Tablero();
     int Casillero = int.Parse(Console.ReadLine());
 
+    while (TaTeTi[Casillero - 1] == 'X' || TaTeTi[Casillero - 1] == 'O') //Verificcación de casilla (Anti-Cheat)
+    {
+        Console.WriteLine("La casilla está ocupada. Por favor elija otra");
+        Casillero = int.Parse(Console.ReadLine());
+    }
+
     TaTeTi[Casillero - 1] = Jugador;
 
     Resultado(Jugador);
@@ -37,12 +43,12 @@ void Tablero()
 
 void Resultado(char a)
 {
-    if (TaTeTi[6] == a && TaTeTi[7] == a && TaTeTi[8] == a) { Fin = true; }
-    if (TaTeTi[3] == a && TaTeTi[4] == a && TaTeTi[5] == a) { Fin = true; }
-    if (TaTeTi[0] == a && TaTeTi[1] == a && TaTeTi[2] == a) { Fin = true; }
-    if (TaTeTi[6] == a && TaTeTi[3] == a && TaTeTi[0] == a) { Fin = true; }
-    if (TaTeTi[7] == a && TaTeTi[4] == a && TaTeTi[1] == a) { Fin = true; }
-    if (TaTeTi[8] == a && TaTeTi[5] == a && TaTeTi[2] == a) { Fin = true; }
-    if (TaTeTi[0] == a && TaTeTi[4] == a && TaTeTi[8] == a) { Fin = true; }
-    if (TaTeTi[6] == a && TaTeTi[4] == a && TaTeTi[2] == a) { Fin = true; }
+    if (TaTeTi[6] == a && TaTeTi[7] == a && TaTeTi[8] == a) { Fin = true; } //7 | 8 | 9 | Horizontales
+    if (TaTeTi[3] == a && TaTeTi[4] == a && TaTeTi[5] == a) { Fin = true; } //4 | 5 | 6
+    if (TaTeTi[0] == a && TaTeTi[1] == a && TaTeTi[2] == a) { Fin = true; } //1 | 2 | 3
+    if (TaTeTi[6] == a && TaTeTi[3] == a && TaTeTi[0] == a) { Fin = true; } //1 | 4 | 7 | Verticales
+    if (TaTeTi[7] == a && TaTeTi[4] == a && TaTeTi[1] == a) { Fin = true; } //2 | 5 | 8
+    if (TaTeTi[8] == a && TaTeTi[5] == a && TaTeTi[2] == a) { Fin = true; } //3 | 6 | 9
+    if (TaTeTi[0] == a && TaTeTi[4] == a && TaTeTi[8] == a) { Fin = true; } //1 | 5 | 9 | Diagonales
+    if (TaTeTi[6] == a && TaTeTi[4] == a && TaTeTi[2] == a) { Fin = true; } //7 | 5 | 3
 }//revisión de resultado
