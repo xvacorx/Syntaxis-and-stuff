@@ -8,7 +8,7 @@ int Contador = 0;
 while (!Fin)
 {
     Console.WriteLine("Jugador {0}:", Jugador);
-    Console.WriteLine("Elija Casilla 1-9)"); //Referencia de tecládo numérico de PC
+    Console.WriteLine("Elija Casilla (1-9)"); //Referencia de tecládo numérico de PC
     Tablero();
     int Casillero = int.Parse(Console.ReadLine());
 
