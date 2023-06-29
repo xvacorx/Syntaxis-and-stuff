@@ -11,14 +11,10 @@ while (Fin == false)
 {
     Console.WriteLine("Jugador {0}:", Jugador);
     Console.WriteLine("Elija Casilla 1-9)"); //Referencia de tecládo numérico de PC
-    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[6], TaTeTi[7], TaTeTi[8]); //7 | 8 | 9
-    Console.WriteLine("----------");
-    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[3], TaTeTi[4], TaTeTi[5]); //4 | 5 | 6
-    Console.WriteLine("----------");
-    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[0], TaTeTi[1], TaTeTi[2]); //1 | 2 | 3
+    Tablero();
     Casillero = int.Parse(Console.ReadLine());
 
-    Casilla(Casillero, Jugador);
+    TaTeTi[Casillero - 1] = Jugador;
 
     Resultado(Jugador);
 
@@ -29,26 +25,17 @@ while (Fin == false)
 
 if (Empate) { Console.WriteLine("Empate!"); }
 else { Console.WriteLine("EL ganador es el jugador {0}!", Jugador); }
-
 Console.WriteLine();
-Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[6], TaTeTi[7], TaTeTi[8]);
-Console.WriteLine("----------");
-Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[3], TaTeTi[4], TaTeTi[5]);
-Console.WriteLine("----------");
-Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[0], TaTeTi[1], TaTeTi[2]);
+Tablero();
 
-void Casilla(int a, char b)
+void Tablero()
 {
-    if (a == 1) { TaTeTi[0] = b; }
-    if (a == 2) { TaTeTi[1] = b; }
-    if (a == 3) { TaTeTi[2] = b; }
-    if (a == 4) { TaTeTi[3] = b; }
-    if (a == 5) { TaTeTi[4] = b; }
-    if (a == 6) { TaTeTi[5] = b; }
-    if (a == 7) { TaTeTi[6] = b; }
-    if (a == 8) { TaTeTi[7] = b; }
-    if (a == 9) { TaTeTi[8] = b; }
-}//Asignación de casilla y jugador
+    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[6], TaTeTi[7], TaTeTi[8]); //7 | 8 | 9
+    Console.WriteLine("----------");
+    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[3], TaTeTi[4], TaTeTi[5]); //4 | 5 | 6
+    Console.WriteLine("----------");
+    Console.WriteLine("| {0} | {1} | {2} |", TaTeTi[0], TaTeTi[1], TaTeTi[2]); //1 | 2 | 3
+}
 
 void Resultado(char a)
 {
