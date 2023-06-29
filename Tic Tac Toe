@@ -52,3 +52,5 @@ void Resultado(char a)
     if (TaTeTi[0] == a && TaTeTi[4] == a && TaTeTi[8] == a) { Fin = true; } //1 | 5 | 9 | Diagonales
     if (TaTeTi[6] == a && TaTeTi[4] == a && TaTeTi[2] == a) { Fin = true; } //7 | 5 | 3
 }//revisión de resultado
+
+Console.ReadLine();
