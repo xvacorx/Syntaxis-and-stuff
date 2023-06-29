@@ -1,18 +1,16 @@
 char[] TaTeTi = new char[9];
 
 bool Empate = false;
-char Ganador = ' ';
 bool Fin = false;
-int Casillero = 0;
 char Jugador = 'X';
 int Contador = 0;
 
-while (Fin == false)
+while (!Fin)
 {
     Console.WriteLine("Jugador {0}:", Jugador);
     Console.WriteLine("Elija Casilla 1-9)"); //Referencia de tecládo numérico de PC
     Tablero();
-    Casillero = int.Parse(Console.ReadLine());
+    int Casillero = int.Parse(Console.ReadLine());
 
     TaTeTi[Casillero - 1] = Jugador;
 
@@ -39,12 +37,12 @@ void Tablero()
 
 void Resultado(char a)
 {
-    if (TaTeTi[6] == a && TaTeTi[7] == a && TaTeTi[8] == a) { Fin = true; Ganador = a; }
-    if (TaTeTi[3] == a && TaTeTi[4] == a && TaTeTi[5] == a) { Fin = true; Ganador = a; }
-    if (TaTeTi[0] == a && TaTeTi[1] == a && TaTeTi[2] == a) { Fin = true; Ganador = a; }
-    if (TaTeTi[6] == a && TaTeTi[3] == a && TaTeTi[0] == a) { Fin = true; Ganador = a; }
-    if (TaTeTi[7] == a && TaTeTi[4] == a && TaTeTi[1] == a) { Fin = true; Ganador = a; }
-    if (TaTeTi[8] == a && TaTeTi[5] == a && TaTeTi[2] == a) { Fin = true; Ganador = a; }
-    if (TaTeTi[0] == a && TaTeTi[4] == a && TaTeTi[8] == a) { Fin = true; Ganador = a; }
-    if (TaTeTi[6] == a && TaTeTi[4] == a && TaTeTi[2] == a) { Fin = true; Ganador = a; }
+    if (TaTeTi[6] == a && TaTeTi[7] == a && TaTeTi[8] == a) { Fin = true; }
+    if (TaTeTi[3] == a && TaTeTi[4] == a && TaTeTi[5] == a) { Fin = true; }
+    if (TaTeTi[0] == a && TaTeTi[1] == a && TaTeTi[2] == a) { Fin = true; }
+    if (TaTeTi[6] == a && TaTeTi[3] == a && TaTeTi[0] == a) { Fin = true; }
+    if (TaTeTi[7] == a && TaTeTi[4] == a && TaTeTi[1] == a) { Fin = true; }
+    if (TaTeTi[8] == a && TaTeTi[5] == a && TaTeTi[2] == a) { Fin = true; }
+    if (TaTeTi[0] == a && TaTeTi[4] == a && TaTeTi[8] == a) { Fin = true; }
+    if (TaTeTi[6] == a && TaTeTi[4] == a && TaTeTi[2] == a) { Fin = true; }
 }//revisión de resultado
